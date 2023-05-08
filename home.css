@@ -18,8 +18,8 @@ body {
     display: flex;
     justify-content: space-between;
     padding-bottom: 0px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 3rem;
+    margin-right: 3rem;
     height: 5rem;
 }
 
@@ -104,6 +104,11 @@ body {
 }
 
 .fade {
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+.backFade {
     animation-name: fade;
     animation-duration: 2s;
 }
@@ -214,7 +219,7 @@ body {
 }
 
 audio {
-    width:100%;
+    width:80%;
     padding-right: 1rem;
 }
 
