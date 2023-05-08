@@ -28,31 +28,48 @@
         </div>
     </div>
     <div id="main-content">
-        <div class="slideContainer">
-            <div class="slideLayout">
-                <a class="prevArrow" href="#">
-                    <img src="images/icons/left-arrow.png" class="slideArrow">
-                </a>
-                <div class="slideContent">
-                    <div class="slideNum">
-                        <div class="slide-0">
-                            <div class="slide-0-img">
-                                <img class="slide-0-cover" src="images/BookCovers/dracula.png">
-                            </div>
-                            <div class="slide-0-text">
-                                Dracula is a novel by Bram Stoker, published in 1897. An epistolary novel, the narrative is related through letters, diary entries, and newspaper articles. It has no single protagonist, but opens with solicitor Jonathan Harker taking a business trip to stay at the castle of a Transylvanian nobleman, Count Dracula 
-                            </div>
-                        </div>
-                        <div class="slide-1"></div>
-                        <div class="slide-2"></div>
+        <div class="slideContainer">            
+            <div class="slideLayout Layout-0">                                     
+                <div class="slide slide-0 fade">                  
+                    <div class="slide-img">
+                        <img class="slide-cover" src="images/BookCovers/dracula.png">
+                    </div>
+                    <div class="slide-text">
+                        Dracula is a novel by Bram Stoker, published in 1897. An epistolary novel, the narrative is related through letters, diary entries, and newspaper articles. It has no single protagonist, but opens with solicitor Jonathan Harker taking a business trip to stay at the castle of a Transylvanian nobleman, Count Dracula 
+                    </div>
+                </div>              
+            </div>
+            <div class="slideLayout Layout-1">
+                <div class="slide slide-1 fade">                  
+                    <div class="slide-img">
+                        <img class="slide-cover" src="images/BookCovers/Frankensteincover.png">
+                    </div>
+                    <div class="slide-text">
+                        Frankenstein; or, The Modern Prometheus is an 1818 novel written by English author Mary Shelley. Frankenstein tells the story of Victor Frankenstein, a young scientist who creates a sapient creature in an unorthodox scientific experiment.
                     </div>
                 </div>
-                
-                <a class="nextArrow" href="#">
-                    <img src="images/icons/right-arrow.png"  class="slideArrow">
-                </a>           
             </div>
+            <div class="slideLayout Layout-2">
+                <div class="slide slide-2 fade">                  
+                    <div class="slide-img">
+                        <img class="slide-cover" src="images/BookCovers/the-godfather-book-cover.png">
+                    </div>
+                    <div class="slide-text">
+                        The Godfather is a crime novel by American author Mario Puzo. Originally published in 1969 by G. P. Putnam's Sons, the novel details the story of a fictional Mafia family in New York City, headed by Vito Corleone, the Godfather 
+                    </div>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br>
+
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
         <div class="itemHighlightContainer">
             <div class="itemHighlight">
                 <div class="itemPic">
@@ -62,14 +79,17 @@
                     <div class="itemText">
                         Everyday we grind and grind away at this life. At the rate it seems to be going, we will continue to Grind Til The End.
                     </div>
-                    <div class="homeButtons">
-                        <button id="Play" onclick="playPause()">
+                    <audio controls controlsList="nodownload">
+                        <source src="Songs/Old RuneScape Soundtrack_ Sea Shanty2.mp3">
+                    </audio>
+                    <!-- <div class="homeButtons">
+                        <button id="Play" onclick="playSong()" type="button">
                             <img src="images/icons/play2.png">                       
                         </button>
-                        <button id="Pause" onclick="playPause()">
+                        <button id="Pause" onclick="pauseSong()" type="button">
                             <img src="images/icons/pause.png">
                         </button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -95,3 +115,11 @@
 </body>
 <script src="home.js"></script>
 </html>
+
+<a class="prevArrow" href="#">
+    <img src="images/icons/left-arrow.png" class="slideArrow">
+</a>
+
+<a class="nextArrow" href="#">
+    <img src="images/icons/right-arrow.png"  class="slideArrow">
+</a> 

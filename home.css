@@ -6,10 +6,6 @@ body {
     /*-webkit-text-size-adjust: 100%;*/
 }
 
-.div {
-    display: block;
-}
-
 .top {
     width:100%;
     background-color: #4f4f50;
@@ -24,7 +20,7 @@ body {
     padding-bottom: 0px;
     margin-left: 20px;
     margin-right: 20px;
-    height: 40px;
+    height: 5rem;
 }
 
 .title {
@@ -53,45 +49,121 @@ body {
 .slideContainer {
     display: flex;
     justify-content: center;
+    max-width: 70%;
+    position: relative;
+    margin: auto;
     color: #eeeeed;
-    margin-bottom: 30px;    
+    border: 1px solid #eeeeed;    
 }
 
 .slideLayout{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 70%;
-    height: 100%;
-    border:  1px solid #eeeeed;
-    margin-top: 0px;
+    display: none; 
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #eeeeed;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left:0;
+}
+
+.next {
+    right:0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.Layout-0 {
     background: url(images/BookCovers/draculaback.png) no-repeat;
     background-position: center;
     background-size: fit;
     background-color: grey;
     background-blend-mode: multiply;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-.slideContent {
+.Layout-1 {
+    background: url(images/BookCovers/Frankensteinback.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: grey;
+    background-blend-mode: multiply;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.Layout-2 {
+    background: url(images/BookCovers/the-godfather-book-back.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: grey;
+    background-blend-mode: multiply;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.slideLayout {
     display: flex;
-    width:100%;
     justify-content: center;
-    margin: 5%;
 }
 
-.slide-0 {
+.slide {
     display: flex;
     justify-items: space-evenly;
     gap: 50px;
+    padding: 5%;
 }
 
-.slide-0-cover {
+.slide-cover {
     height: 200px;
     width: 150px;
+    box-shadow: 0px 0px 50px #ffffff;
 }
 
-.slide-0-text {
+.slide-text {
     align-self: center;
+    background-color: rgba(0,0,0,0.8);
 }
 
 .slideArrow {
@@ -113,7 +185,8 @@ body {
     display: flex;
     justify-content: center;
     color: #eeeeed;
-    margin-bottom: 1000px;
+    margin-bottom: 100px;
+    margin-top: 30px;
 }
 
 .itemHighlight {
@@ -138,6 +211,11 @@ body {
 .itemSynop img {
     height: 40px;
     width: 40px;
+}
+
+audio {
+    width:100%;
+    padding-right: 1rem;
 }
 
 .button {

@@ -1,8 +1,37 @@
-function playPause(){
-    var music = new Audio('Songs/Old RuneScape Soundtrack_ Sea Shanty2.mp3');
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slideLayout");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+/*
+var music = 
+
+function playSong(){
+    music.play();
+}
+
+function pauseSong(){
+    music.pause();
+}*/
