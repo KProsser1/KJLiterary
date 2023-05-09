@@ -40,6 +40,26 @@ body {
     color: #eeeeed;
 }
 
+a:link {
+    text-decoration: none;
+    color:#eeeeed;
+}
+
+a:visited {
+    text-decoration: none;
+    color:#eeeeed;
+}
+
+a:hover { 
+    text-decoration: underline;
+    color: rgb(231, 94, 94);
+}
+
+a:active { 
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
+}
+
 .left, .right {
     display: flex;
     align-items: center;
