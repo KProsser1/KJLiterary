@@ -58,13 +58,11 @@ a:visited {
     color:#eeeeed;
 }
 
-a:hover { 
-    text-decoration: underline;
+a:hover {    
     color: rgb(231, 94, 94);
 }
 
 a:active { 
-    text-decoration: underline;
     color: rgb(255, 0, 0);
 }
 
@@ -74,7 +72,7 @@ a:active {
     color: #eeeeed;
     font-size:xx-large;
     font-weight: bold;
-    margin-bottom: 3rem;
+    margin: 1rem;
     /*font-family:*/
 }
 
