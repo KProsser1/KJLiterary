@@ -51,10 +51,12 @@ a:visited {
 }
 
 a:hover { 
+    text-decoration: underline;
     color: rgb(231, 94, 94);
 }
 
 a:active { 
+    text-decoration: underline;
     color: rgb(255, 0, 0);
 }
 
@@ -258,3 +260,4 @@ audio {
     justify-content: space-evenly;
     gap: 15px;
 }
+

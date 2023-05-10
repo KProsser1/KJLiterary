@@ -1,3 +1,42 @@
+/*var slides = document.getElementsByClassName('.slideContainer .slideLayout');
+var dots = document.querySelectorAll('.dot');
+var currentSlide = 0;
+const interval = 3000;
+
+function changeSlide(n) {
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].className = dots[i].className.replace(' active', '');
+    }
+
+    currentSlide = n;
+
+    slides[currentSlide].style.display = "block";
+    dots[currentSlide].className += ' active';
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let slides = document.querySelectorAll(".slideLayout"),
 arrowLeft = document.querySelector(".prev"),
 arrowRight = document.querySelector(".next"),
@@ -34,9 +73,10 @@ arrowLeft.addEventListener("click", function () {
 });
 
 arrowRight.addEventListener("click", function () {
-    if (slideIndex === slides.length - 1) {
+    if (slideIndex === 2) {
         slideIndex = -1;
     }
+
     slideRight();
 })
 
@@ -48,25 +88,22 @@ showSlides();
 
 function showSlides() {
     let i;
-    let slides = document.getElementsByClassName("slideLayout");
-    let dots = document.getElementsByClassName("dot");
+    let slides = document.getElementsByClassName(".slideLayout");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    if (slideIndex === slides.length) {
+        slideIndex = 0
     }
+    slides[slideIndex].style.display = "block";
+    setTimeout(showSlides, 4000);
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 7000);
     console.log(slideIndex);
 }
 
-
+/*
 //clickable scroll
-/*let slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
