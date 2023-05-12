@@ -140,7 +140,7 @@ a:active {
     justify-content: space-between;
     gap: px;
     color: #eeeeed;
-}
+}*/
 
 .pricePrevCart {
     display: flex;
@@ -152,7 +152,7 @@ a:active {
     max-width: 10rem;
     margin-left: .5em;
     margin-right: .5em;
-}*/
+}
 
 .popup {
     position: fixed;
