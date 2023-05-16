@@ -110,9 +110,11 @@ a:active {
     gap: 10px;
 }
 
-.audio {
-    margin: 0;
-    padding: 0;
+.controlCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
 }
 
 .songTitle {
