@@ -36,3 +36,11 @@ window.addEventListener("click", function (event) {
         godfatherPopup.classList.remove("show");
     }
 });
+
+
+function goToNewPage() {
+    var url = document.getElementById('list').value;
+    if(url != 'none') {
+        window.location = url;
+    }
+}

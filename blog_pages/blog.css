@@ -3,6 +3,8 @@
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -45,6 +47,26 @@ body {
     gap: 16px;
     font-size: 18px;
     color: #eeeeed;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+}
+
+select {
+    background-color: #4f4f50;
+    color: #eeeeed;
+    font-size: 18px;
+    border: 1px solid #eeeeed;
+    width: 5.5rem;
+}
+
+form input {
+    background-color: #4f4f50;
+    color: #eeeeed;
+    font-size: 18px;
+    border: 1px solid #eeeeed;
 }
 
 .left, .right {
@@ -125,7 +147,7 @@ a:active {
 }
 
 .footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -140,11 +162,24 @@ a:active {
     display: flex;
     justify-content: space-evenly;
     gap: 15px;
+    padding-right: 2rem;
 }
 
 @media screen and (max-width: 800px) {
     .leftcolumn, .rightcolumn {
       width: 100%;
       padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .right ul { 
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .right form {
+        display: none;
     }
 }

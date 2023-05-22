@@ -1,4 +1,6 @@
 body {
+    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -64,14 +66,33 @@ a:active {
     gap: 16px;
 }
 
+form {
+    display: flex;
+    gap: 1rem;
+}
+
+select {
+    background-color: #4f4f50;
+    color: #eeeeed;
+    font-size: 18px;
+    border: 1px solid #eeeeed;
+    width: 5.5rem;
+}
+
+form input {
+    background-color: #4f4f50;
+    color: #eeeeed;
+    font-size: 18px;
+    border: 1px solid #eeeeed;
+}
+
 .slideContainer {
     display: flex;
     justify-content: center;
     max-width: 70%;
     position: relative;
     margin: auto;
-    color: #eeeeed;
-    border: 1px solid #eeeeed;    
+    color: #eeeeed;   
 }
 
 .slideLayout{
@@ -215,7 +236,6 @@ a:active {
     align-items: center;
     width: 70%;
     height: 100%;
-    border:  1px solid #eeeeed;
     margin-top: 0px;
 }
 
@@ -242,7 +262,7 @@ audio {
 }
 
 .footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -257,4 +277,17 @@ audio {
     display: flex;
     justify-content: space-evenly;
     gap: 15px;
+    padding-right: 2rem;
+}
+
+@media (max-width: 600px) {
+    .right ul { 
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .right form {
+        display: none;
+    }
 }
