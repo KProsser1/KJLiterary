@@ -244,6 +244,10 @@ h1 {
     align-items: center;
 }
 
+.leftFoot {
+    padding-left: 1rem;
+}
+
 .contact-icons {
     display: flex;
     justify-content: space-evenly;
@@ -251,6 +255,9 @@ h1 {
     padding-right: 2rem;
 }
 
+.About {
+    padding-right: 1rem;
+}
 @media (max-width: 600px) {
     .right ul { 
         display: none;

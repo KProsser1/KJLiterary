@@ -217,15 +217,15 @@ form input {
 }
 
 .itemPic img {
-    height: 200px;
-    width: 200px;
+    height: 10rem;
+    width: 10rem;
 }
 
 .itemHighlightContainer {
     display: flex;
     justify-content: center;
     color: #eeeeed;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     margin-top: 30px;
 }
 
@@ -246,15 +246,14 @@ form input {
     justify-content: center;
     gap: 10px;
 }
-
-.itemSynop img {
-    height: 40px;
-    width: 40px;
+.audioControls {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10rem;
 }
 
 audio {
-    width:80%;
-    padding-right: 1rem;
+    width:70%;
 }
 
 .button {
@@ -273,11 +272,19 @@ audio {
     align-items: center;
 }
 
+.leftFoot {
+    padding-left: 1rem;
+}
+
 .contact-icons {
     display: flex;
     justify-content: space-evenly;
     gap: 15px;
     padding-right: 2rem;
+}
+
+.About {
+    padding-right: 1rem;
 }
 
 @media (max-width: 600px) {

@@ -151,11 +151,19 @@ a:active {
     align-items: center;
 }
 
+.leftFoot {
+    padding-left: 1rem;
+}
+
 .contact-icons {
     display: flex;
     justify-content: space-evenly;
     gap: 15px;
     padding-right: 2rem;
+}
+
+.About {
+    padding-right: 1rem;
 }
 
 @media (max-width: 600px) {
