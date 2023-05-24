@@ -233,9 +233,16 @@ h1 {
 
 .footer {
     width: 100%;
-    height: 50px;
+    height: 5rem;
     background-color: #4f4f50;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.topFoot {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,6 +250,12 @@ h1 {
 
 .leftFoot {
     padding-left: 1rem;
+}
+
+.leftBottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .contact-icons {
