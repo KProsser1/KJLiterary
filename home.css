@@ -196,8 +196,7 @@ form input {
 
 .slide {
     display: flex;
-    justify-items: space-evenly;
-    gap: 50px;
+    justify-content: center;
     padding: 5%;
 }
 
