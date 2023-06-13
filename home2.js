@@ -1,63 +1,32 @@
-/*var imgs = document.querySelectorAll('.slideLayout .slide');
-var dots = document.querySelectorAll('.dot');
-var currentImg = 0;
-const interval = 3000;
+var slideIndex = 1;
+showDivs(slideIndex);
 
-function changeSlide(n) {
-    for (var i = 0; i < imgs.length; i++) {
-        imgs[i].style.opacity = 0;
-        dots[i].className = dots[i].className.replace(' active', '');
-        console.log(dot);
-    }
-
-    currentImg = n;
-
-    imgs[currentImg].style.opacity = 1;
-    dots[currentImg].className += ' active';
-}*/
-
-
-let slides = document.querySelectorAll(".slideLayout"),
-arrowLeft = document.querySelector(".prev"),
-arrowRight = document.querySelector(".next"),
-slideIndex = 0;
-
-function reset() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
 
-function startSlide() {
-    reset();
-    slides[0].style.display = "block";
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slideLayout");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
 }
 
-function slideLeft() {
-    reset();
-    slides[slideIndex - 1].style.display = "block";
-    slideIndex --;
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("slideLayout");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 7000); // Change image every 2 seconds
 }
-
-function slideRight() {
-    reset();
-    slides[slideIndex + 1].style.display = "block";
-    slideIndex ++;
-}
-
-arrowLeft.addEventListener("click", function () {
-    if (slideIndex === 0) {
-        slideIndex = slides.length;
-    }
-    slideLeft();
-});
-
-arrowRight.addEventListener("click", function () {
-    if (slideIndex === 2) {
-        slideIndex = -1;
-    }
-
-    slideRight();
-})
-
-startSlide();

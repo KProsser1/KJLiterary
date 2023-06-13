@@ -69,11 +69,16 @@ a:active {
 .slideContainer {
     display: flex;
     justify-content: center;
+    overflow: hidden;
     max-width: 70%;
     position: relative;
     margin: auto;
     color: #eeeeed;
     border: 1px solid #eeeeed;    
+}
+
+.slideContainer input {
+    display: none;
 }
 
 .slideLayout{
