@@ -95,6 +95,15 @@ a:active {
     /*font-family:*/
 }
 
+.Soon {
+    text-align: center;
+    color: #eeeeed;
+    font-size:xx-large;
+    font-weight: bold;
+    margin: 1rem;
+    padding-bottom: 300px;
+}
+
 .bookContainer {
     display: flex;
     justify-content: center;
