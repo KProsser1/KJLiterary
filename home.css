@@ -196,7 +196,7 @@ form input {
 
 .slide {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     padding: 5%;
 }
 
