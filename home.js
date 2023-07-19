@@ -31,6 +31,19 @@ function carousel() {
   setTimeout(carousel, 7000); // Change image every 2 seconds
 }
 
+Email.addEventListener("click", function() {
+  popup.classList.add("show");
+});
+closePopup.addEventListener("click", function(e) {
+  e.preventDefault();
+  popup.classList.remove("show");
+});
+window.addEventListener("click", function (event) {
+  if (event.target == popup) {
+      popup.classList.remove("show");
+  }
+});
+
 function goToNewPage() {
     var url = document.getElementById('list').value;
     if(url != 'none') {
