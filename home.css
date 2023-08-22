@@ -326,7 +326,7 @@ audio {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
 }
 
 .topFoot {
@@ -335,7 +335,7 @@ audio {
     align-items: top;
     margin-left: 2rem;
     margin-right: 2rem;
-    gap: 3rem;    
+    gap: 1rem;   
 }
 
 .topFoot ul {
